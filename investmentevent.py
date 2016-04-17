@@ -1,5 +1,6 @@
 import urllib.request as fetch
 import re
+from pymongo import MongoClient as mc
 
 def investmentevent(i):
     url = 'https://www.itjuzi.com/investevents?pageview='+str(i)
@@ -50,3 +51,4 @@ def investmentevent(i):
         investment_event['investment_info']=investors
 
         print(investment_event)
+
